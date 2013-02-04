@@ -37,8 +37,8 @@
 #include <msp430.h>
 #include <stdio.h>
 #include "uart.h"
-#include "i2c.h"
-//#include "mpu6050.h"
+
+
 
 #define printNum(num,format) printf("%s:%d  s" #num"=%"#format"\r\n",__FILE__,__LINE__,num);
 int putchar(int c){
@@ -76,25 +76,6 @@ int main(void)
     uart_puts((char *)"Starting example\r\n ");
 
 
-    /************/
-    /* i2c test */
-    /************/
-
-    /* i2cSetupPins(); */
-        
-    /* char versionAddress=MPU6050_RA_WHO_AM_I; */
-    /* char version=-1; */
-    /* i2cSetupTx(MPU6050_DEFAULT_ADDRESS); */
-    /* printNum(0,d); */
-    /* i2cTransmit(&versionAddress,1); */
-    /* printNum(0,d); */
-    /* i2cPoll(MPU6050_DEFAULT_ADDRESS); */
-    /* /\*Receive 1 Byte of temperature data*\/ */
-    /* i2cSetupRx(MPU6050_DEFAULT_ADDRESS); */
-    /* i2cReceive(&version, 1); */
-    /* UCB0CTL1 |= UCSWRST; */
-	
-    /* 	printf("verion=%x\n",version); */
 	
     volatile unsigned long i;
 
