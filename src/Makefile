@@ -1,5 +1,5 @@
 BINARY		 = firmware
-OBJS		+= main.o uart.o i2c.o #mpu6050.o
+OBJS		+= main.o uart.o #i2c.o mpu6050.o
 
 include ../common.mk
 
